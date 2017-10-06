@@ -3,17 +3,27 @@ $(function() {
     try {  
 
         /* Dropzone logic */
-        $('#dropzone input').on('change', function(e) {
+        $('#dropzone Input[name=file]').on('change', function(e) {
+            
+            var textType = /text.*/;
+            var file = e.target.files[0];
+            
+            if (file.type.match(textType)) {
+                
+                this.form.fileName.value = file.name;
+                
+                var reader = new FileReader();
 
-            var reader = new FileReader();
+                reader.readAsText(file);
 
-            reader.readAsText(this.files[0]);
+                reader.onload = function(e) {
+                    alert(e.target.result); // data of the droped .txt file
+                };
 
-            reader.onload = function(e) {
+            } else {
+                alert("File not supported!");
+            }
 
-                alert(e.target.result) // data of the droped .txt file
-
-            };
         });
 
         /* Dropzone hover */

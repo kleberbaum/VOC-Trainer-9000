@@ -1,36 +1,65 @@
 /* CSS-Datei */
 * {
     margin: 0px;
-    font-family: 'Noto Sans';
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Noto Sans';
     font-weight: lighter;
-    letter-spacing: 2px;
+    letter-spacing: 0.5px;
+}
+
+*:focus {
+    outline: none;
 }
 
 html {
     min-width: 804px;
     padding: 0px;
     margin: 0px;
+    font-size: 18px;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     min-height: 500px;
-    height: 50vh;
-    background-color: aliceblue;
+    height: 100vh;
+}
+
+.title {
+    margin-left: 18px;
+}
+
+.title .firstl {
+    color: #dbff00;
 }
 
 header {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    min-height: 100px;
     min-width: 300px;
-    height: 3vh;
-    width: 100vw;
+    min-height: 10vh;
+    width: 100%;
+    background-color: #008080;
+}
+
+article {
+    overflow: hidden;
+    position: relative;
+    background-color: #000080;
+    width: 100%;
+
+    box-sizing: border-box;
+    border: solid #000080 20px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000080;
+    min-height: calc(90vh - 86px);
+    box-sizing: border-box;
+    border: solid #c0c0c0 1px;
 }
 
 #dropzone {
@@ -42,17 +71,9 @@ header {
     min-width: 700px;
     height: 30vh;
     width: 70vw;
-    
     background-image: linear-gradient(135deg,rgba(0,0,0,.03)25%, transparent 25%, transparent 50%, rgba(0,0,0,.03)50%, rgba(0,0,0,.03)75%, transparent 75%, transparent);
-    background-color: #FAFCFD;
+    background-color: #d1d1d1;
     background-size: 16px 16px;
-    
-    /*
-    border-top-style: dotted;
-    border-right-style: solid;
-    border-bottom-style: dotted;
-    border-left-style: solid;
-    */
 }
 
 #dropzone input[type=file] {
@@ -73,7 +94,6 @@ header {
 #dropzone input[type=text] {
     background: none;
     border: none;
-    padding: 0.5em;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -81,30 +101,53 @@ header {
     box-sizing: border-box;
 }
 
+#dropzone input[type=text]::placeholder {
+
+}
+
 #dropzone.hover {
-    background-color: #eee;
+    background-color: #c0c0c0;
     border: 6px dashed rgba(#000, 0.1);
 }
 
 footer {
-    position: absolute;
-    bottom: 0px;
+    position: relative;
+    width: 100%;
+    background-color: black;
+}
+
+footer nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    color: white;
+}
+
+footer nav lable{
     width: 100%;
+    background-color: #008080;
+    color: black;
 }
 
-.glhf {
-    animation-duration: 1s;
-    animation-name: blink;
-    animation-iteration-count: infinite;
-    animation-timing-function: steps(2, start);
+footer nav lable span{
+    width: 20px;
+    background-color: black;
+    color: white;
 }
 
-@keyframes blink {
-    80% {
-        visibility: hidden;
-    }
+#cmd {
+    color: #c0c0c0;
+    border: none;
+    margin: 3px;
+}
+
+#cli {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    box-sizing: border-box;
+    width: calc(100% - 217px);
+    margin-right: 2px;
+    color: #c0c0c0;
 }

@@ -4,10 +4,8 @@
         <meta charset="utf-8">
         <title>VOC-Trainer-9000</title>
         <meta name="author" content="kleberbaum"/>
-        <link href="http://fonts.googleapis.com/css?family=Noto%20Sans:300,400,500,700" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="./CSS/styles.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="./JS/dropzone.js"></script>
     </head>
     <body>
         <header>
@@ -15,27 +13,21 @@
         </header>
         <article>
             <section>
-                <form>
-                    <label for="file" id="dropzone">
-                        <input type="file" accept="text/plain" name="file" required>
-                        <input type="text" id="fileName" name="fileName" placeholder="Drop a Unit.txt file (or click)" readonly>
-                    </label>
-                </form>
+                <iframe id="oculus" name="oculus" src="./ENGINE/file.html"></iframe>
             </section>
         </article>
         <footer>
             <label for="cmd" id="cmd">Toko@Alpha-PC:~$&nbsp<input type="text" id="cli" name="cli" autofocus>[^]</label>
             <nav>
-                <lable><span>&nbsp1</span>Help</lable>
-                <lable><span>&nbsp2</span>Menu</lable>
-                <lable><span>&nbsp3</span>View</lable>
-                <lable><span>&nbsp4</span>Edit</lable>
-                <lable><span>&nbsp5</span>Copy</lable>
-                <lable><span>&nbsp6</span>RenMov</lable>
-                <lable><span>&nbsp7</span>Mkdir</lable>
-                <lable><span>&nbsp8</span>Delete</lable>
-                <lable><span>&nbsp9</span>PullDN</lable>
-                <lable><span>10</span>Quit</lable>
+                <a href="./ENGINE/file.html" target="oculus" title="Help"><span>&nbsp1</span><span>Help</span></a>
+                <a href="./ENGINE/trainer.html" target="oculus" title="Start"><span>&nbsp2</span><span>Start</span></a>
+                <a href="./ENGINE/satus.html" target="oculus" title="Status"><span>&nbsp3</span><span>Status</span></a>
+                <a href="./ENGINE/file.html" target="oculus" title="Load"><span>&nbsp4</span><span>Load</span></a>
+                <a href="./ENGINE/file.html" target="oculus" title="Download"><span>&nbsp5</span><span>Download</span></a>
+                <a href="./ENGINE/file.html" target="oculus" title="Clear"><span>&nbsp6</span><span>Clear</span></a>
+                <a id="party" href="#party" title="Party" title="Party"><span>&nbsp7</span><span>Party</span></a>
+                <a href="./ENGINE/about.html" target="oculus" title="About"><span>&nbsp8</span><span>About</span></a>
+                <a href="./ENGINE/file.html" target="oculus" title="Quit"><span>&nbsp9</span><span>Quit</span></a>
             </nav>
         </footer>
     </body>

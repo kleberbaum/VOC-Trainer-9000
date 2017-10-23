@@ -1,9 +1,12 @@
 /* CSS-Datei */
 * {
     margin: 0px;
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Noto Sans';
+    padding: 0px;
+    border: 0px;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-weight: lighter;
     letter-spacing: 0.5px;
+    text-decoration: none;
 }
 
 *:focus {
@@ -21,6 +24,7 @@ body {
     position: relative;
     min-height: 500px;
     height: 100vh;
+    background-color: #000000;
 }
 
 .title {
@@ -47,7 +51,6 @@ article {
     position: relative;
     background-color: #000080;
     width: 100%;
-
     box-sizing: border-box;
     border: solid #000080 20px;
 }
@@ -56,63 +59,24 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000080;
-    min-height: calc(90vh - 86px);
+    min-height: calc(90vh - 84px);
     box-sizing: border-box;
     border: solid #c0c0c0 1px;
 }
 
-#dropzone {
+#oculus {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: 300px;
     min-width: 700px;
-    height: 30vh;
+    height: 45vh;
     width: 70vw;
-    background-image: linear-gradient(135deg,rgba(0,0,0,.03)25%, transparent 25%, transparent 50%, rgba(0,0,0,.03)50%, rgba(0,0,0,.03)75%, transparent 75%, transparent);
-    background-color: #d1d1d1;
-    background-size: 16px 16px;
 }
 
-#dropzone input[type=file] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 0;
-    font-size: 2rem;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    box-sizing: border-box;
-}
-
-#dropzone input[type=text] {
-    background: none;
-    border: none;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    font-size: 2rem;
-    box-sizing: border-box;
-}
-
-#dropzone input[type=text]::placeholder {
-
-}
-
-#dropzone.hover {
-    background-color: #c0c0c0;
-    border: 6px dashed rgba(#000, 0.1);
-}
 
 footer {
     position: relative;
     width: 100%;
+    height: 44px;
     background-color: black;
 }
 
@@ -122,15 +86,16 @@ footer nav {
     justify-content: space-around;
     align-items: center;
     color: white;
+    height: 20px;
 }
 
-footer nav lable{
+footer nav a{
     width: 100%;
     background-color: #008080;
     color: black;
 }
 
-footer nav lable span{
+footer nav a span:nth-child(1){
     width: 20px;
     background-color: black;
     color: white;
@@ -139,15 +104,16 @@ footer nav lable span{
 #cmd {
     color: #c0c0c0;
     border: none;
-    margin: 3px;
+    height: 20px;
+    margin: 0 3px;
 }
 
 #cli {
+    font-size: 0.9rem;
     background: none;
     border: none;
-    font-size: 1rem;
     box-sizing: border-box;
-    width: calc(100% - 217px);
+    width: calc(100% - 239px);
     margin-right: 2px;
     color: #c0c0c0;
 }

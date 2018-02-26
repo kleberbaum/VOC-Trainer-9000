@@ -117,3 +117,8 @@ footer nav a span:nth-child(1){
     margin-right: 2px;
     color: #c0c0c0;
 }
+
+.party {
+  background-color: transparent;
+  background-image: none;
+}

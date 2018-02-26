@@ -1,6 +1,11 @@
 $(function() {
 
     try {
+        //get
+        var cookies = {};
+        document.cookie.split('; ').forEach(function(item) {
+            cookies[item.split('=')[0]] = item.split('=')[1];
+        });
 
         /* Dropzone logic */
         $('#dropzone Input[name=file]').on('change', function(e) {
@@ -15,12 +20,12 @@ $(function() {
                 var reader = new FileReader();
 
                 reader.readAsText(file);
-                alert("1")
+
                 reader.onload = function(e) {
-                    vox = e.target.result.split('\n').join(';');
-                    alert(vox);
-                    document.cookie = vox;
-                    alert(document.cookie);
+                        var voc=e.target.result
+
+                        alert(e.target.result)
+                    }
                 }
 
             } else {
